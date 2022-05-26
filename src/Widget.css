@@ -1,0 +1,162 @@
+.widget__container {
+	position: sticky;
+	top: 90px;
+	flex: 0.3;
+	height: fit-content;
+	/* overflow: hidden; */
+}
+
+.widget__container > hr {
+	border: 1px solid lightgray;
+	background: white;
+	height: 1px;
+	border-radius: 30px;
+	margin: 15px 0 30px;
+}
+
+.widget {
+	height: fit-content;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid lightgray;
+}
+
+.widget__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+.widget__header > h4 {
+	font-weight: 500;
+	color: rgb(34, 34, 34);
+}
+
+.widgetHeader__icon {
+	height: 16px !important;
+	color: rgb(112, 112, 112) !important;
+}
+
+.widget__content {
+	padding: 15px;
+}
+
+.userCard {
+	display: flex;
+	gap: 9px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+
+.userCard > .avatar {
+	width: 48px;
+	height: 48px;
+}
+
+.userCard__content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.userCard__name {
+	font-weight: 500;
+	font-size: 0.9rem;
+	overflow-wrap: anywhere;
+}
+
+.userCard__title {
+	font-size: 0.7rem;
+	overflow-wrap: anywhere;
+	color: gray;
+	margin: 5px 0;
+}
+
+.userCard__button {
+	align-self: flex-end;
+	display: flex;
+	align-items: center;
+	border: 1px solid lightgray;
+	border-radius: 15px;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0.4em 0.6em;
+	outline-offset: -2px;
+	outline: 2px solid transparent;
+
+	transition: all 0.5s ease;
+}
+
+.userCard__button:hover {
+	outline-offset: -2px;
+	outline: 1.5px solid rgb(109, 109, 109);
+	background-color: rgb(233, 233, 233);
+}
+
+.userCard__button > svg {
+	width: 20px !important;
+	height: 20px !important;
+	color: rgb(92, 92, 92);
+}
+
+/* Widget footer */
+
+.widget__footer {
+	/* margin-top: 10px; */
+	display: flex;
+	align-items: center;
+	padding: 0 15px 15px 15px;
+}
+
+.widget__footer > p {
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+.widget__footer > p:hover {
+	text-decoration: underline;
+}
+
+.widget__footer > .widgetFooter__icon {
+	height: 16px !important;
+}
+
+/* Footer */
+
+footer {
+	position: sticky;
+	top: 90px;
+	height: fit-content;
+}
+
+.footer {
+	width: 100% !important;
+	display: flex;
+	justify-content: center;
+	gap: 3px;
+	/* margin-top: 50px; */
+}
+
+.footer > p {
+	font-size: 0.7rem;
+}
+
+.footer__logo {
+	display: flex;
+	align-items: center;
+	gap: 1px;
+}
+
+.footer__logo > .text {
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+.footer__creator {
+	margin-left: 15px;
+}
+
+.footer__creator > .name {
+	font-weight: 700;
+}

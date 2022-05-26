@@ -1,0 +1,174 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: white;
+	height: 100vh;
+}
+
+.login__logo {
+	padding: 40px 50px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.login__logo .text {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: rgb(75, 75, 75);
+}
+
+.login__form {
+	width: min(80%, 302px);
+	align-self: center;
+	padding: 30px 25px;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50%, -52%);
+	overflow: hidden;
+
+	transition: height 0.5s ease;
+}
+
+.loginForm__container {
+	width: 100%;
+}
+
+.loginForm__header {
+	margin-bottom: 25px;
+}
+
+.loginForm__header > h1 {
+	font-weight: 500;
+}
+
+.loginForm__container > form {
+	display: flex;
+	flex-direction: column;
+}
+
+.loginForm__container > form > input {
+	margin-bottom: 20px;
+	font-size: 1rem;
+	padding: 0.8em 0.8em;
+	border-radius: 9px;
+	outline: none;
+	border: 1px solid rgb(212, 212, 212);
+	outline-offset: -2px;
+	outline: 2px solid transparent;
+
+	transition: all 0.5s ease;
+}
+
+.loginForm__container > form > input::placeholder {
+	font-size: 0.9rem;
+}
+
+.loginForm__container > form > input:focus {
+	outline-offset: -2px;
+	outline: 2px solid #064c92;
+}
+
+.loginForm__container > form > button {
+	padding: 18px;
+	border-radius: 30px;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	font-size: 1.03rem;
+	font-weight: 600;
+	color: white;
+	background-color: #0a66c2;
+	margin-bottom: 15px;
+}
+
+.loginForm__container > form > button:hover {
+	background-color: #09529b;
+}
+
+.loginForm__container > p {
+	font-size: 0.9rem;
+}
+
+.login__register {
+	margin-left: 6px;
+	font-weight: 600;
+	cursor: pointer;
+	color: #09529b;
+}
+
+.login__footer {
+	padding: 60px 0 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.loginFooter__logo {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+.loginFooter__logo > .text {
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.login__footer > p {
+	font-size: 0.8rem;
+}
+
+.loginFooter__creator {
+	margin-left: 60px;
+}
+
+.loginFooter__creator > .name {
+	font-weight: 700;
+}
+
+/* CSSTransiton Style */
+
+/* Sign in Section */
+.signin-enter {
+	position: absolute;
+	transform: translateX(-110%);
+}
+
+.signin-enter-active {
+	transform: translateX(0%);
+	transition: all 0.5s ease;
+}
+
+.signin-exit {
+	position: absolute;
+}
+
+.signin-exit-active {
+	transform: translateX(-110%);
+	transition: all 0.5s ease;
+}
+
+/* Register Section */
+.register-enter {
+	position: absolute;
+	transform: translateX(110%);
+}
+
+.register-enter-active {
+	transform: translateX(0%);
+	transition: all 0.5s ease;
+}
+
+.register-exit {
+}
+
+.register-exit-active {
+	transform: translateX(110%);
+	transition: all 0.5s ease;
+}
