@@ -72,6 +72,10 @@ function Login() {
 					});
 			})
 			.catch((error) => alert(error));
+
+		setTimeout(() => {
+			window.location.reload();
+		}, 1000);
 	};
 
 	return (
