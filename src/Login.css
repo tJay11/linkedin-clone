@@ -147,6 +147,7 @@
 
 .signin-exit {
 	position: absolute;
+	transform: translateX(0%);
 }
 
 .signin-exit-active {
@@ -166,6 +167,8 @@
 }
 
 .register-exit {
+	position: absolute;
+	transform: translateX(0%);
 }
 
 .register-exit-active {

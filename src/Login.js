@@ -43,39 +43,57 @@ function Login() {
 			.catch((error) => alert(error));
 	};
 
-	const register = () => {
+	const register = async (e) => {
+		e.preventDefault();
 		if (!name) {
 			return alert("Please enter a full name");
+		}
+
+		try {
+			const resp = await auth.createUserWithEmailAndPassword(email, password);
+			const update = await resp.user.updateProfile({
+				displayName: name,
+				photoURL: profilePic,
+			});
+			console.log(update);
+			const disp = await dispatch(
+				login({
+					email: resp.user.email,
+					uid: resp.user.uid,
+					displayName: name,
+					photoURL: profilePic,
+				})
+			);
+
+			window.location.reload();
+		} catch (error) {
+			alert(error);
 		}
 
 		// methods are from firebase
 		//after creating the user then()promise
 		//update the profile (updateProfile)promise
 		//dispatch user to redux data store(bubble)
-		auth
-			.createUserWithEmailAndPassword(email, password)
-			.then((userAuth) => {
-				userAuth.user
-					.updateProfile({
-						displayName: name,
-						photoURL: profilePic,
-					})
-					.then(() => {
-						dispatch(
-							login({
-								email: userAuth.user.email,
-								uid: userAuth.user.uid,
-								displayName: name,
-								photoURL: profilePic,
-							})
-						);
-					});
-			})
-			.catch((error) => alert(error));
-
-		setTimeout(() => {
-			window.location.reload();
-		}, 1000);
+		// auth
+		// 	.createUserWithEmailAndPassword(email, password)
+		// 	.then((userAuth) => {
+		// 		userAuth.user
+		// 			.updateProfile({
+		// 				displayName: name,
+		// 				photoURL: profilePic,
+		// 			})
+		// 			.then(() => {
+		// 				dispatch(
+		// 					login({
+		// 						email: userAuth.user.email,
+		// 						uid: userAuth.user.uid,
+		// 						displayName: name,
+		// 						photoURL: profilePic,
+		// 					})
+		// 				);
+		// 			});
+		// 	})
+		// 	.catch((error) => alert(error));
 	};
 
 	return (

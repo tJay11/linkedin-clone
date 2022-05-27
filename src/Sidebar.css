@@ -17,11 +17,12 @@
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	background-color: #fff;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .sidebar__top > h2 {
 	font-size: 1rem;
+	font-weight: 500;
 	padding-inline: 10px;
 	margin-bottom: 5px;
 }
