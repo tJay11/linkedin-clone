@@ -205,7 +205,7 @@ function Login() {
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
 								type="password"
-								placeholder="Password"
+								placeholder="Password (not less than 6 characters)"
 								required
 							/>
 
